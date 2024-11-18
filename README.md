@@ -10,7 +10,9 @@ docker-compose up --build
 
 **Example POST call:**
 
+```markdown
 POST http://localhost:5000/api/properties
+```
 
 Payload: 
 
