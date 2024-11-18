@@ -57,4 +57,24 @@ const updateProperty = async (req, res) => {
     }
 };
 
-module.exports = { createProperty, getAllProperties, getPropertyById, updateProperty };
+// Delete property by ID
+
+const deleteProperty = async (req, res) => {
+
+    try {
+        const propertyId = req.params.id;
+        // Find the property by ID and delete it
+        const deletedProperty = await Property.findByIdAndDelete(propertyId);
+
+        if (!deletedProperty) {
+            return res.status(404).json({ message: 'Property not found' });
+        }
+
+        res.status(200).json({ message: 'Property deleted successfully', deletedProperty });
+    } catch (error) {
+        console.error('Error deleting property:', error);
+        res.status(500).json({ message: 'An error occurred while deleting the property', error });
+    }
+}
+
+module.exports = { createProperty, getAllProperties, getPropertyById, updateProperty, deleteProperty };
