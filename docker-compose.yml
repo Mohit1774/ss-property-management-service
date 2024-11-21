@@ -1,16 +1,17 @@
 version: '3.7'
 services:
-  app:
+  property-management-service:
     build: .
     container_name: property-management-service
     ports:
       - "5000:5000"
     environment:
-      - MONGO_URI=mongodb://mongo:27017/propertydb
+      - MONGO_URI=mongodb://mongo:27017/propertydb  # MongoDB connection URI
     depends_on:
       - mongo
+
   mongo:
     image: mongo:latest
     container_name: mongo
     ports:
-      - "27017:27017"
+      - "27017:27017"  # Exposes MongoDB on localhost port 27017
