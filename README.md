@@ -37,8 +37,9 @@ The Property Management Service is a microservice in the Real Estate Platform th
 
 2. Run the application using the command:
 
-  ```bash
+  ```markdown
   docker-compose up --build
+  ```
 
 
 **Example POST call:**
