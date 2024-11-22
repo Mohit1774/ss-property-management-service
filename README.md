@@ -1,12 +1,45 @@
-# ss-property-management-service
+# Real-Estate-Platform
+# Property Management Service
 
-This repository is for property management service.
+The Property Management Service is a microservice in the Real Estate Platform that manages property data. It provides functionality for creating property entries, updating properties information, retrieving properties, and deleting properties. 
 
-Run the application using the command:
+## Features
 
-```markdown
-docker-compose up --build
-```
+- **Property Creation**: Create a new property entry by providing property details as per the schema provided below.
+- **Get All Properties**: Retrieve all properties.
+- **Get Property by ID**: Retrieve a property by its unique ID.
+- **Update Property**: Update property information by its ID.
+- **Delete Property**: Delete a property by their ID.
+
+## Technologies Used
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- Docker for deployment and containerization
+- bcryptjs for password hashing
+
+## Setup
+
+### Prerequisites
+
+- Node.js
+- MongoDB instance (can use MongoDB Atlas for cloud-based DB)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Mohit1774/ss-property-management-service.git
+
+
+2. Run the application using the command:
+
+  ```bash
+  docker-compose up --build
+
 
 **Example POST call:**
 
@@ -56,7 +89,4 @@ PUT http://localhost:5000/api/properties/:id
 ```markdown
 DELETE http://localhost:5000/api/properties/:id
 ```
-
-
-
  
