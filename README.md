@@ -1,5 +1,5 @@
 # Real-Estate-Platform
-# Property Management Service
+## Property Management Service
 
 The Property Management Service is a microservice in the Real Estate Platform that manages property data. It provides functionality for creating property entries, updating properties information, retrieving properties, and deleting properties. 
 
